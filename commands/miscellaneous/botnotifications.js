@@ -23,7 +23,7 @@ module.exports = {
         .setFooter(message.id)
         .setTimestamp();
 
-        let role = message.guild.roles.find('id', '574765872967843841')
+        let role = message.guild.roles.find('id', '577257592167071746')
 
         if(!message.guild.me.hasPermissions(["MANAGE_ROLES"])) return console.log("I don't have enough permissions to run some commands!")
         
