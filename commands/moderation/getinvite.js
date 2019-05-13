@@ -16,8 +16,9 @@ module.exports = {
         .setFooter(message.id)
         .setTimestamp();
         
-        let invite = await message.channel.createInvite()
-        invite.maxUses = 1;
+        let invite = await message.channel.createInvite({
+            maxUses: 1
+        })
 
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
