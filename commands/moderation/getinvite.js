@@ -17,7 +17,6 @@ module.exports = {
         .setTimestamp();
         
         let invite = await message.channel.createInvite()
-        .maxAge(1800000)
         .maxUses(1);
 
         let logembed = new RichEmbed()
