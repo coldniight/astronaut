@@ -52,11 +52,18 @@ module.exports = {
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
+        
+        let logembed = new RichEmbed()
+        .setTitle("Astronaut Bot")
+        .setDescription(`User **${mutee}** with ID **${mutee.id}** has been unmuted by ${message.author} on ${message.channel}.`)
+        .setColor(0x3c368f)
+        .setFooter(message.id)
+        .setTimestamp();
 
         if(!mutee.roles.has(muterole.id)) return message.channel.send(alrembed);
         await(mutee.removeRole(muterole.id))
         message.channel.send(muteembed)
         mutee.send(unmuteembed)
-        
+        message.guild.channels.get("577253140601241600").send(logembed)
     }
 }
