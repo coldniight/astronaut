@@ -34,7 +34,7 @@ module.exports = {
 
         let inviteembed = new RichEmbed()
         .setTitle("Astronaut Bot")
-        .setDescription(`Your invite has been generated, ${message.author}`)
+        .setDescription(`Your invite has been generated, ${message.author}: \`${invite}\`.`)
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
@@ -48,6 +48,6 @@ module.exports = {
 
         message.author.send(inviteembed)
         message.channel.send(invitechannelembed)
-        message.guild.channels.get("577322671679733770").send(logembed)
+        message.guild.channels.get("577253140601241600").send(logembed)
     }
 }
