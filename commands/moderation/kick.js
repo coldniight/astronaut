@@ -58,7 +58,7 @@ module.exports = {
 
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
-        .setDescription(`User **${kickMember}** with ID **${kickMember.id}** has been kicked by ${message.author} for reason '${reason}'.`)
+        .setDescription(`User **${kickMember}** with ID **${kickMember.id}** has been kicked by ${message.author} for reason \`${reason}\`.`)
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
