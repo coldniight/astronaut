@@ -18,7 +18,7 @@ module.exports = {
         
         let invite = await message.channel.createInvite({
             maxUses: 1,
-            maxAge: 10 * 360 * 1000
+            maxAge: 3600
         })
 
         let logembed = new RichEmbed()
