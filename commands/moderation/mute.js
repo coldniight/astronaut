@@ -114,7 +114,7 @@ module.exports = {
         
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
-        .setDescription(`User **${mutee}** with ID **${mutee.id}** has been muted by ${message.author} for \`${time}\` ` + minutes + ` with reason '${reason}'.`)
+        .setDescription(`User **${mutee}** with ID **${mutee.id}** has been muted by ${message.author} for \`${time}\` ` + minutes + ` with reason \`${reason}\`.`)
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
