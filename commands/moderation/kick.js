@@ -67,7 +67,7 @@ module.exports = {
         kickMember.kick()).catch(err => console.log(err))
 
         message.channel.send(kickembed)
-        message.guild.channels.find("577253140601241600").send(logembed)
+        message.guild.channels.get("577253140601241600").send(logembed)
         
     }
 }
