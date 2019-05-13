@@ -19,7 +19,7 @@ module.exports = {
         let invite = await message.channel.createInvite({
             maxAge: 10 * 60 * 1000, 
             maxUses: 1 
-          });
+          })
 
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
