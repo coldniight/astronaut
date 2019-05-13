@@ -12,7 +12,7 @@ module.exports = {
         let adminembed = new RichEmbed()
         .setColor(0x3c368f)
         .setTitle("Astronaut Bot")
-        .setDescription(`Avaible commands for user ${message.author}\n\n**help**, **ping**, **botnotifications**, **mute**, **unmute**, **kick**, **ban**, **purge**, **nickname**, **resetname**`)
+        .setDescription(`Avaible commands for user ${message.author}\n\n**help**, **ping**, **botnotifications**, **mute**, **unmute**, **kick**, **ban**, **purge**, **nickname**, **resetname**, **getinvite**`)
         .setFooter(message.id)
         .setTimestamp()
 
