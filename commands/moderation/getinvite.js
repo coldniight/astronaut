@@ -16,7 +16,7 @@ module.exports = {
         .setFooter(message.id)
         .setTimestamp();
         
-        let invite = await message.channel.createInvite(
+        let invite = await message.channel.createInvite()
         .maxAge(1800000)
         .maxUses(1);
 
