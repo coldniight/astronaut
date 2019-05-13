@@ -15,11 +15,6 @@ module.exports = {
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
-        
-        let invite = await message.channel.createInvite({
-          maxAge: 10 * 60 * 1000 //maximum time for the invite, in milliseconds
-          maxUses: 1 //maximum times it can be used
-        }, `Requested with command by ${message.author.tag}`);
 
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
@@ -34,7 +29,7 @@ module.exports = {
 
         let inviteembed = new RichEmbed()
         .setTitle("Astronaut Bot")
-        .setDescription(`Your invite has been generated, ${message.author}: \`${invite}\`.`)
+        .setDescription(`Your invite has been generated, ${message.author}: \`yeah\`.`)
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
