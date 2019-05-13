@@ -15,6 +15,11 @@ module.exports = {
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
+        
+        let invite = await message.channel.createInvite({
+          maxAge: 10 * 60 * 1000 //maximum time for the invite, in milliseconds
+          maxUses: 1 //maximum times it can be used
+        }, `Requested with command by ${message.author.tag}`).catch(console.log);
 
         let logembed = new RichEmbed()
         .setTitle("Astronaut Bot")
@@ -43,6 +48,6 @@ module.exports = {
 
         message.author.send(inviteembed)
         message.channel.send(invitechannelembed)
-        message.guild.channels.find("577322671679733770").send(logembed)
+        message.guild.channels.get("577322671679733770").send(logembed)
     }
 }
