@@ -111,11 +111,21 @@ module.exports = {
         .setColor(0x3c368f)
         .setFooter(message.id)
         .setTimestamp();
+        
+        let logembed = new RichEmbed()
+        .setTitle("Astronaut Bot")
+        .setDescription(`User **${mutee}** with ID **${mutee.id}** has been muted by ${message.author} for \`${time}\` ` + minutes + ` with reason '${reason}'.`)
+        .setColor(0x3c368f)
+        .setFooter(message.id)
+        .setTimestamp();
 
         if(mutee.roles.has(muterole.id)) return message.channel.send(alrembed);
         await(mutee.addRole(muterole.id))
         message.channel.send(muteembed)
         mutee.send(mutememembed)
+        message.guild.channels.get("577253140601241600").send(logembed)
+        
+        
 
         setTimeout(function(){
             if(!mutee.roles.has(muterole.id)) return;
